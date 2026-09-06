@@ -107,6 +107,9 @@ class SelfAttention(nn.Module):
         new_v = v
         
         # 3. KV Cache
+        # past_k: [B, H, S_past, Dh]
+        # past_v: [B, H, S_past, Dh]
+        # S_past: 缓存了多少个历史 token
         if past_kv is not None:
             past_k, past_v = past_kv
 
