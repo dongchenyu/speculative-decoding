@@ -120,7 +120,7 @@ def main():
     torch.manual_seed(1)
     with torch.no_grad():
         for p in draft_model.parameters():
-            p.add_(0.002 * torch.randn_like(p))
+            p.add_(0.02 * torch.randn_like(p))
             
     input_ids = torch.tensor([[10, 20, 30, 40]], device=device)
     max_new_tokens = 12
