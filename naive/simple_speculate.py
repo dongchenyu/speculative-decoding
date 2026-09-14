@@ -1,6 +1,6 @@
 import copy
 import torch
-from simple_transformer_kvcache import TinyTransformerLM
+from naive.simple_transformer_kvcache import TinyTransformerLM
 
 @torch.no_grad()
 def greedy_next_token(model, tokens):
